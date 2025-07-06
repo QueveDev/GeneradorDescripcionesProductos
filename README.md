@@ -1,0 +1,2 @@
+# GeneradorDescripcionesProductos
+Generador descripciones miniTool
