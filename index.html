@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Descripciones de Productos Amazon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Generador de Descripciones de Productos Amazon</h1>
+        <form id="product-form">
+            <label for="product-name">Nombre del producto:</label>
+            <input type="text" id="product-name" name="product-name" required>
+
+            <label for="product-features">Características principales (separadas por coma):</label>
+            <textarea id="product-features" name="product-features" rows="3" required></textarea>
+
+            <button type="submit">Generar descripción</button>
+        </form>
+        <div id="description-section">
+            <h2>Descripción generada:</h2>
+            <div id="generated-description"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

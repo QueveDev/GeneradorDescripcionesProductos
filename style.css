@@ -1,0 +1,114 @@
+/* Importar fuente moderna desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #eef2f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 480px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 2.5em 3em;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.8em;
+    font-weight: 600;
+    font-size: 1.9rem;
+    color: #222;
+}
+
+form label {
+    display: block;
+    margin-top: 1.2em;
+    margin-bottom: 0.4em;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #444;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.75em 1em;
+    border: 1.8px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-bottom: 1em;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #222;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #0073bb;
+    outline: none;
+    box-shadow: 0 0 6px rgba(0, 115, 187, 0.4);
+}
+
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    background: #0073bb;
+    color: #fff;
+    border: none;
+    padding: 0.85em 0;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1.2em;
+    transition: background 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0, 115, 187, 0.3);
+}
+
+button[type="submit"]:hover {
+    background: #005fa3;
+    box-shadow: 0 6px 18px rgba(0, 95, 163, 0.4);
+}
+
+#description-section {
+    margin-top: 2.5em;
+    background: #fefefe;
+    padding: 1.3em 1.5em;
+    border-radius: 10px;
+    border: 1.5px solid #d7d7d7;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+    min-height: 80px;
+}
+
+#generated-description {
+    margin-top: 0.5em;
+    font-size: 1.15rem;
+    color: #2a2a2a;
+    white-space: pre-line;
+    word-wrap: break-word;
+}
+
+/* Responsive tweaks */
+@media (max-width: 540px) {
+    .container {
+        margin: 30px 15px;
+        padding: 2em 1.5em;
+    }
+    h1 {
+        font-size: 1.6rem;
+    }
+}
