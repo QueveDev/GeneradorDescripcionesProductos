@@ -2,26 +2,52 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Generador de Descripciones de Productos Amazon</title>
+    <title id="title-text">Generador de Descripciones de Productos Amazon</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Generador de Descripciones de Productos Amazon</h1>
+        <div style="text-align:right; margin-bottom: 1em;">
+            <label for="lang-select" id="lang-label" style="font-weight:600;">Idioma:</label>
+            <select id="lang-select">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>
+        <h1 id="main-title">Generador de Descripciones de Productos Amazon</h1>
         <form id="product-form">
-            <label for="product-name">Nombre del producto:</label>
+            <label for="product-name" id="product-label">Nombre completo del producto (tal como aparece en Amazon):</label>
             <input type="text" id="product-name" name="product-name" required>
-
-            <label for="product-features">Características principales (separadas por coma):</label>
-            <textarea id="product-features" name="product-features" rows="3" required></textarea>
-
-            <button type="submit">Generar descripción</button>
+            <label for="product-features" id="features-label">Características principales (opcional, separadas por coma):</label>
+            <textarea id="product-features" name="product-features" rows="2" placeholder="Ej: Motor potente, diseño compacto, fácil de limpiar"></textarea>
+            <label for="tone-select" id="tone-label">Tono de escritura:
+                <span title="¿Cómo quieres que suene la descripción? Elige el estilo de redacción más adecuado para tu público.">*</span>
+            </label>
+            <select id="tone-select">
+                <option value="professional" title="Formal, informativo, adecuado para negocios y B2B.">Profesional</option>
+                <option value="persuasive" title="Enfatiza beneficios y motiva la compra.">Persuasivo</option>
+                <option value="casual" title="Cercano, amigable, ideal para redes sociales.">Casual</option>
+                <option value="minimalist" title="Directo, breve, solo lo esencial.">Minimalista</option>
+                <option value="creative" title="Original, imaginativo, diferente.">Creativo</option>
+                <option value="seo" title="Optimizado para buscadores, incluye palabras clave.">SEO-Friendly</option>
+            </select>
+            <button type="submit" id="generate-btn">Generar descripción</button>
         </form>
+        <h2 id="desc-title" style="margin-top:2.5em; margin-bottom:0.7em; font-size:1.15rem; font-weight:600; color:#444;">
+            Descripción generada:
+        </h2>
         <div id="description-section">
-            <h2>Descripción generada:</h2>
             <div id="generated-description"></div>
         </div>
     </div>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</body>
+</html>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </body>
 </html>
